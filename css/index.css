@@ -5,8 +5,6 @@ body {
     padding: 0;
 }
 
-
-
 .navbar {
     display: flex;
     justify-content: center;
@@ -32,7 +30,7 @@ body {
     color: white;
 }
 
-.converter-wrapper{
+.converter-wrapper {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -45,8 +43,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 350px;
-
+    width: 90%; /* Adjust for responsiveness */
+    max-width: 350px; /* Limit max width */
 }
 
 .converter-container h1 {
@@ -60,6 +58,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
+    gap: 5px; /* Add space between tabs */
 }
 
 .tab {
@@ -70,7 +69,7 @@ body {
     font-weight: bold;
     border-radius: 5px;
     background-color: white;
-    margin: 0 5px;
+    margin: 0;
     font-size: 0.9rem;
     border: 1px solid rgb(225, 225, 225);
 }
@@ -124,4 +123,32 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 600px) {
+    .tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tab {
+        font-size: 0.8rem;
+    }
+
+    .converter-container h1 {
+        font-size: 1.2rem;
+    }
+
+    .converter-container input, .converter-container select {
+        font-size: 0.9rem;
+    }
+
+    .converter-container button {
+        font-size: 0.9rem;
+    }
+
+    .converter-container .result {
+        font-size: 1rem;
+    }
 }

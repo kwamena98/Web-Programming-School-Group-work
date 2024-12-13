@@ -43,8 +43,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 90%; /* Adjust for responsiveness */
-    max-width: 350px; /* Limit max width */
+    width: 90%;
+    max-width: 350px;
+    position: relative;
 }
 
 .converter-container h1 {
@@ -58,7 +59,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
-    gap: 5px; /* Add space between tabs */
+    gap: 5px;
 }
 
 .tab {
@@ -93,11 +94,30 @@ body {
 
 .converter-container input, .converter-container select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Custom styling for select elements */
+.converter-container select {
+    -webkit-appearance: none; /* Remove default styling on iOS/Safari */
+    -moz-appearance: none;    /* Remove default styling on Firefox */
+    appearance: none;         /* Modern browsers */
+    background-color: white;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 4 5\'%3E%3Cpath fill=\'%23aaa\' d=\'M2 0L0 2h4zM2 5L0 3h4z\'/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 40px; /* Padding for the dropdown arrow */
+}
+
+.converter-container select:focus {
+    outline: none;
+    border-color: black;
 }
 
 .converter-container button {

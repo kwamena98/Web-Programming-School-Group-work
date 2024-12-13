@@ -108,5 +108,4 @@ function convertValue() {
 
 convertButton.addEventListener('click', convertValue);
 
-// Initialize default tab
 updateTab('length');

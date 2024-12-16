@@ -16,7 +16,7 @@
             <h1>Unit Converter</h1>
     
             <div class="tabs">
-                <div class="tab active" data-type="length">Length</div>
+                <div class="tab" data-type="length">Length</div>
                 <div class="tab" data-type="weight">Weight</div>
                 <div class="tab" data-type="temperature">Temperature</div>
             </div>
@@ -27,7 +27,8 @@
             <input type="number" id="input-value" placeholder="Enter value" />
     
             <label for="from-unit">From:</label>
-            <select id="from-unit"></select>
+            <select id="from-unit">
+            </select>
     
             <label for="to-unit">To:</label>
             <select id="to-unit"></select>
@@ -35,9 +36,7 @@
             <button id="convert-button">Convert</button>
     
             <div class="result" id="result"></div>
-            <div style="display: none;" class="store-result-container">
-                <button id="store-button">Add to history</button>
-            </div>
+
         </div>
     </div>
 

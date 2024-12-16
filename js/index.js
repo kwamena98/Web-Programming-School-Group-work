@@ -34,17 +34,18 @@ const toUnitSelect = document.getElementById('to-unit');
 const convertButton = document.getElementById('convert-button');
 const resultDiv = document.getElementById('result');
 
+
 function populateUnits(selectedType) {
     const units = unitData[selectedType].units;
     fromUnitSelect.innerHTML = '';
     toUnitSelect.innerHTML = '';
-
     units.forEach(unit => {
         const option = `<option value="${unit}">${unit.charAt(0).toUpperCase() + unit.slice(1)}</option>`;
         fromUnitSelect.innerHTML += option;
         toUnitSelect.innerHTML += option;
     });
 }
+
 
 function updateTab(selectedType) {
     tabs.forEach(tab => {
@@ -55,6 +56,7 @@ function updateTab(selectedType) {
 
     populateUnits(selectedType);
 }
+
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -96,7 +98,8 @@ function convertValue() {
         const conversionTable = unitData[selectedType].conversion;
 
         if (fromUnit === toUnit) {
-            convertedValue = inputValue;
+            convertedValue = inputValue; // same unit
+
         } else {
             const factor = conversionTable[fromUnit][toUnit];
             convertedValue = inputValue * factor;
@@ -105,6 +108,7 @@ function convertValue() {
 
     resultDiv.textContent = `Result: ${convertedValue.toFixed(2)} ${toUnit}`;
 }
+
 
 convertButton.addEventListener('click', convertValue);
 

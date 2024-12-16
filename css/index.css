@@ -38,6 +38,9 @@ body {
     align-items: center;
 }
 
+
+
+
 .converter-container {
     background-color: #fff;
     border-radius: 10px;
@@ -108,7 +111,6 @@ body {
     -moz-appearance: none;    /* Remove default styling on Firefox */
     appearance: none;         /* Modern browsers */
     background-color: white;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 4 5\'%3E%3Cpath fill=\'%23aaa\' d=\'M2 0L0 2h4zM2 5L0 3h4z\'/%3E%3C/svg%3E');
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 10px;

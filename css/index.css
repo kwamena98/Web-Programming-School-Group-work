@@ -111,6 +111,7 @@ body {
     -moz-appearance: none;    /* Remove default styling on Firefox */
     appearance: none;         /* Modern browsers */
     background-color: white;
+    color:black;
     padding-right: 40px; /* Padding for the dropdown arrow */
 }
 
